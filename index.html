@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagem/x-icon" href="/img/dksitelogo.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="text/javascript" href="/index.js">
+    <title>Mini-projetos JavaScript</title>
+    <script>
+        /* Remover letras repetidas*/
+        function removerLetrasRepetidas() {
+            var palavra = document.getElementById("palavra").value;
+            var letrasUnicas = '';
+            for (var i = 0; i < palavra.length; i++) {
+                if (palavra.lastIndexOf(palavra[i]) == palavra.indexOf(palavra[i])) {
+                    letrasUnicas += palavra[i];
+                }
+            }
+            document.getElementById("novaPalavra").innerHTML = "Nova palavra: " + letrasUnicas;
+        }
+
+        /* Letras invertidas*/
+        function inverterNome() {
+            var nome = document.getElementById("nome").value;
+            var nomeInvertido = '';
+            for (var i = nome.length - 1; i >= 0; i--) {
+                nomeInvertido += nome[i];
+            }
+            document.getElementById("novoNome").innerHTML = "Nome invertido: " + nomeInvertido;
+        }
+    </script>
+</head>
+
+<body>
+    <!--Remover letras repetidas-->
+    <div class="letrasRepetidas">
+        <p>Escreva uma palavra minúscula com algumas letras repetidas:</p>
+        <form action="">
+            <input type="text" id="palavra">
+            <input type="reset" value="Limpar">
+        </form>
+        <p>Agora clique no botão "Remover letras repetidas" e aparecerá uma nova palavra, sem as letras repetidas.</p>
+        <button onclick="(removerLetrasRepetidas())">Remover letras repetidas</button>
+        <p id="novaPalavra"></p>
+    </div>
+    <br><br>
+    <!--Nome Invertido-->
+    <div class="nomeInvertido">
+        <p>Escreva um nome:</p>
+        <form action="">
+            <input type="text" id="nome">
+            <input type="reset" value="Limpar">
+        </form>
+        <p>Agora clique no botão "Inverter nome" e aparecerá um novo nome.</p>
+        <button onclick="(inverterNome())">Inverter nome</button>
+        <p id="novoNome"></p>
+    </div>
+
+
+
+</body>
+
+</html>
