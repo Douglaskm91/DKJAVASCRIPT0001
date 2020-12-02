@@ -1,3 +1,4 @@
+/* HTML */
 /* Remover letras repetidas (JS-HTML)*/
 function removerLetrasRepetidas() {
     var palavra = document.getElementById("palavra").value;
@@ -22,7 +23,7 @@ function inverterNome() {
 
 
 
-/* --------------------------------------------------------------------------------------- */
+/* ---------------------------------CONSOLE--------------------------------------------- */
 
 
 /* Remover letras repetidas (FuntionJS)(console.log) */
